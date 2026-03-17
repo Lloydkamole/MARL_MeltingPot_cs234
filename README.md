@@ -26,28 +26,32 @@
 
 ## 🧠 CS234 Project Contribution: MARL in Melting Pot
 
-This repository contains our team's project contributions for Stanford's CS234 (Reinforcement Learning). Our research focuses on exploring multi-agent reinforcement learning (MARL) dynamics and social dilemmas utilizing the **Google DeepMind Melting Pot** environment.
+This repository contains our team's project contributions for Stanford's CS234 (Reinforcement Learning) class. Our research focuses on exploring multi-agent reinforcement learning (MARL) dynamics within the **Google DeepMind Melting Pot** environment.
 
 ### 📍 Where to Find Our Work
 
-Our primary codebase, experimental setups, and custom implementations are housed entirely within the [`examples/rllib`](./examples/rllib) directory. 
+Our primary codebase, custom environment wrappers, and experimental setups are housed entirely within the [`examples/rllib`](./examples/rllib) directory.
 
-Inside this directory, our core contributions include:
-* **Ray RLlib Integration:** Custom scripts and configurations to seamlessly train multiple agents within mixed-motive Melting Pot substrates using RLlib.
-* **Environment Wrappers:** [Optional: Mention if you had to build custom wrappers for observation/action spaces]
-* **Training & Evaluation:** [Optional: Briefly list the algorithms you tested, e.g., PPO, MAPPO, or DQN, and the specific metrics you tracked].
+### 🛠️ Core Implementations
 
-### 🚀 Getting Started with Our Code
+Inside this directory, our specific technical contributions include:
+* **Environment Wrapper (`utils.py`):** We built `MeltingPotEnv`, a custom adapter that bridges DeepMind's `dmlab2d` environment with Ray RLlib, converting observation and action tuples into the `spaces.Dict` format required for multi-agent training.
+* **PPO Training Pipeline (`self_play_train.py`):** We implemented a self-play training script utilizing Proximal Policy Optimization (PPO). The model architecture features a custom Convolutional Neural Network (CNN) specifically tuned for Melting Pot's 8x8 visual sprites, paired with an LSTM (cell size 256) to handle partial observability and memory.
+* **Evaluation & Rendering (`view_models.py`):** A custom Pygame-based evaluation script that automatically fetches the best-performing PPO checkpoint and renders the multi-agent rollout at 5 frames per second for visual analysis.
 
-To run our specific CS234 implementations, please navigate to our contribution directory and follow the setup instructions below:
+### 🚀 Getting Started
+
+To run our CS234 implementations, navigate to our contribution directory and execute the scripts:
 
 ```bash
 # Navigate to our specific project directory
 cd examples/rllib
 
-# [Add your specific environment setup commands here, e.g., pip install -r requirements.txt]
+# Launch the PPO self-play training pipeline
+python self_play_train.py
 
-# [Add your execution command here, e.g., python train_meltingpot.py --config config.yaml]
+# Visualize the best trained agents
+python view_models.py
 
 
 ## About
