@@ -54,31 +54,6 @@ python self_play_train.py
 python view_models.py
 
 
-## About
-
-Melting Pot assesses generalization to novel social situations involving both
-familiar and unfamiliar individuals, and has been designed to test a broad range
-of social interactions such as: cooperation, competition, deception,
-reciprocation, trust, stubbornness and so on. Melting Pot offers researchers a
-set of over 50 multi-agent reinforcement learning _substrates_ (multi-agent
-games) on which to train agents, and over 256 unique test _scenarios_ on which
-to evaluate these trained agents. The performance of agents on these held-out
-test scenarios quantifies whether agents:
-
-*   perform well across a range of social situations where individuals are
-    interdependent,
-*   interact effectively with unfamiliar individuals not seen during training
-
-The resulting score can then be used to rank different multi-agent RL algorithms
-by their ability to generalize to novel social situations.
-
-We hope Melting Pot will become a standard benchmark for multi-agent
-reinforcement learning. We plan to maintain it, and will be extending it in the
-coming years to cover more social interactions and generalization scenarios.
-
-If you are interested in extending Melting Pot, please refer to the
-[Extending Melting Pot](https://github.com/google-deepmind/meltingpot/blob/main/docs/extending.md) documentation.
-
 ## Installation
 
 Melting Pot is available on PyPI](https://pypi.python.org/pypi/dm-meltingpot)
