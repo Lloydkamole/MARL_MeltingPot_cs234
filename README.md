@@ -24,6 +24,32 @@
 [Melting Pot 2.0 Tech Report](https://arxiv.org/abs/2211.13746)
 [Melting Pot Contest at NeurIPS 2023](https://www.aicrowd.com/challenges/meltingpot-challenge-2023)
 
+## 🧠 CS234 Project Contribution: MARL in Melting Pot
+
+This repository contains our team's project contributions for Stanford's CS234 (Reinforcement Learning). Our research focuses on exploring multi-agent reinforcement learning (MARL) dynamics and social dilemmas utilizing the **Google DeepMind Melting Pot** environment.
+
+### 📍 Where to Find Our Work
+
+Our primary codebase, experimental setups, and custom implementations are housed entirely within the [`examples/rllib`](./examples/rllib) directory. 
+
+Inside this directory, our core contributions include:
+* **Ray RLlib Integration:** Custom scripts and configurations to seamlessly train multiple agents within mixed-motive Melting Pot substrates using RLlib.
+* **Environment Wrappers:** [Optional: Mention if you had to build custom wrappers for observation/action spaces]
+* **Training & Evaluation:** [Optional: Briefly list the algorithms you tested, e.g., PPO, MAPPO, or DQN, and the specific metrics you tracked].
+
+### 🚀 Getting Started with Our Code
+
+To run our specific CS234 implementations, please navigate to our contribution directory and follow the setup instructions below:
+
+```bash
+# Navigate to our specific project directory
+cd examples/rllib
+
+# [Add your specific environment setup commands here, e.g., pip install -r requirements.txt]
+
+# [Add your execution command here, e.g., python train_meltingpot.py --config config.yaml]
+
+
 ## About
 
 Melting Pot assesses generalization to novel social situations involving both
