@@ -24,30 +24,35 @@
 [Melting Pot 2.0 Tech Report](https://arxiv.org/abs/2211.13746)
 [Melting Pot Contest at NeurIPS 2023](https://www.aicrowd.com/challenges/meltingpot-challenge-2023)
 
-## About
+## 🧠 CS234 Project Contribution: MARL in Melting Pot
 
-Melting Pot assesses generalization to novel social situations involving both
-familiar and unfamiliar individuals, and has been designed to test a broad range
-of social interactions such as: cooperation, competition, deception,
-reciprocation, trust, stubbornness and so on. Melting Pot offers researchers a
-set of over 50 multi-agent reinforcement learning _substrates_ (multi-agent
-games) on which to train agents, and over 256 unique test _scenarios_ on which
-to evaluate these trained agents. The performance of agents on these held-out
-test scenarios quantifies whether agents:
+This repository contains our team's project contributions for Stanford's CS234 (Reinforcement Learning) class. Our research focuses on exploring multi-agent reinforcement learning (MARL) dynamics within the **Google DeepMind Melting Pot** environment.
 
-*   perform well across a range of social situations where individuals are
-    interdependent,
-*   interact effectively with unfamiliar individuals not seen during training
+### 📍 Where to Find Our Work
 
-The resulting score can then be used to rank different multi-agent RL algorithms
-by their ability to generalize to novel social situations.
+Our primary codebase, custom environment wrappers, and experimental setups are housed entirely within the [`examples/rllib`](./examples/rllib) directory.
 
-We hope Melting Pot will become a standard benchmark for multi-agent
-reinforcement learning. We plan to maintain it, and will be extending it in the
-coming years to cover more social interactions and generalization scenarios.
+### 🛠️ Core Implementations
 
-If you are interested in extending Melting Pot, please refer to the
-[Extending Melting Pot](https://github.com/google-deepmind/meltingpot/blob/main/docs/extending.md) documentation.
+Inside this directory, our specific technical contributions include:
+* **Environment Wrapper (`utils.py`):** We built `MeltingPotEnv`, a custom adapter that bridges DeepMind's `dmlab2d` environment with Ray RLlib, converting observation and action tuples into the `spaces.Dict` format required for multi-agent training.
+* **PPO Training Pipeline (`self_play_train.py`):** We implemented a self-play training script utilizing Proximal Policy Optimization (PPO). The model architecture features a custom Convolutional Neural Network (CNN) specifically tuned for Melting Pot's 8x8 visual sprites, paired with an LSTM (cell size 256) to handle partial observability and memory.
+* **Evaluation & Rendering (`view_models.py`):** A custom Pygame-based evaluation script that automatically fetches the best-performing PPO checkpoint and renders the multi-agent rollout at 5 frames per second for visual analysis.
+
+### 🚀 Getting Started
+
+To run our CS234 implementations, navigate to our contribution directory and execute the scripts:
+
+```bash
+# Navigate to our specific project directory
+cd examples/rllib
+
+# Launch the PPO self-play training pipeline
+python self_play_train.py
+
+# Visualize the best trained agents
+python view_models.py
+
 
 ## Installation
 
