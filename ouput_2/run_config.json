@@ -1,0 +1,33 @@
+{
+  "substrate": "commons_harvest__open",
+  "num_agents": 7,
+  "num_iterations": 100,
+  "num_rollout_workers": 10,
+  "train_batch_size": 12500,
+  "sgd_minibatch_size": 256,
+  "rollout_fragment_length": 250,
+  "num_gpus": 1,
+  "checkpoint_freq": 10,
+  "phi_mode": "fixed",
+  "phi_start_deg": 0.0,
+  "phi_end_deg": 45.0,
+  "phi_per_agent_deg": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fcnet_hiddens": [
+    64,
+    64
+  ],
+  "post_fcnet_hiddens": [
+    256
+  ],
+  "lstm_cell_size": 256,
+  "object_store_gb": 40.0,
+  "timestamp": "2026-03-04T12:04:41.415563"
+}

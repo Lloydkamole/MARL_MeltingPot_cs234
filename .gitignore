@@ -27,3 +27,13 @@ __pycache__/
 # Saved models.
 /examples/results/
 /meltingpot/assets/
+
+# output
+/output_2/
+/run_checkpoint/
+/trained_gameplay_videos/
+
+# miscelleanous files
+run_curriculum.py
+phy_reward_warper.py
+profile_training.py

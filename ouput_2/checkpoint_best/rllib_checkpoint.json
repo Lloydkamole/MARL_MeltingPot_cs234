@@ -1,0 +1,1 @@
+{"type": "Algorithm", "checkpoint_version": "1.1", "format": "cloudpickle", "state_file": "/home/lloyd/Documents/DL project CT-MRI/2D UNet/DM/meltingpot/ouput_2/checkpoint_best/algorithm_state.pkl", "policy_ids": ["agent_0", "agent_6", "agent_4", "agent_1", "agent_5", "agent_2", "agent_3"], "ray_version": "2.10.0", "ray_commit": "09abba26b5bf2707639bb637c208d062a47b46f6"}
